@@ -2,7 +2,7 @@
 
 ## Overview
 
-This web application presents the INFO 492 B thesis research on "Agentic AI Systems in Logistics Cybersecurity" by the team consisting of Kenta Lipsey, Hanrui Tang, and Brian Yuan.
+This web application presents the INFO 492 B thesis research on "Agentic AI Systems in Logistics Cybersecurity" by the team consisting of Kenta Lipsey, Hanrui Tang, Brian Yuan, and Ajit Mallavarapu.
 
 ## Features
 
@@ -238,6 +238,7 @@ php -S localhost:8080
   - Kenta Lipsey
   - Hanrui Tang  
   - Brian Yuan
+  - Ajit Mallavarapu
 - **Institution**: University of Washington Information School
 - **Year**: 2024-2025
 

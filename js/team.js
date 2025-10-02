@@ -217,6 +217,12 @@ window.teamData = {
             role: 'Technical Implementation & Model Analysis',
             aiUsage: 'Moderate user',
             focus: 'Practical approach with awareness of AI limitations'
+        },
+        {
+            name: 'Ajit Mallavarapu',
+            role: 'AI Security & Threat Modeling',
+            aiUsage: 'TBD',
+            focus: 'Placeholder - AI security focus and threat analysis'
         }
     ],
     keyFindings: [
