@@ -1,0 +1,448 @@
+/* Threats Page Specific Styles */
+
+.threats-header {
+    padding: 120px 20px 60px;
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    text-align: center;
+    color: white;
+}
+
+.threats-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.threats-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Attack Motivation Section */
+.attack-motivation {
+    padding: 80px 20px;
+    background: white;
+}
+
+.attack-motivation h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.motivation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.motivation-card {
+    background: linear-gradient(135f, #fff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.motivation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.economic::before { background: linear-gradient(90deg, #28a745, #20c997); }
+.geopolitical::before { background: linear-gradient(90deg, #007bff, #6f42c1); }
+.cascading::before { background: linear-gradient(90deg, #dc3545, #fd7e14); }
+
+.motivation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.motivation-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.economic .motivation-icon { background: linear-gradient(135deg, #28a745, #20c997); }
+.geopolitical .motivation-icon { background: linear-gradient(135deg, #007bff, #6f42c1); }
+.cascading .motivation-icon { background: linear-gradient(135deg, #dc3545, #fd7e14); }
+
+.motivation-card h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.motivation-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.case-study {
+    background: linear-gradient(135deg, #f8f9ff, #e8eeff);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.case-study strong {
+    color: #667eea;
+}
+
+/* Vulnerabilities Section */
+.vulnerabilities-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8eeff 100%);
+}
+
+.vulnerabilities-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.vulnerability-categories {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.vulnerability-category {
+    background: white;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.vulnerability-category:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #f8f9ff, #e8eeff);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.category-header:hover {
+    background: linear-gradient(135deg, #e8eeff, #d6dbff);
+}
+
+.category-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.category-header h3 {
+    flex: 1;
+    color: #333;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    color: #667eea;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.expand-btn.expanded {
+    transform: rotate(180deg);
+}
+
+.category-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.category-content.expanded {
+    max-height: 2000px;
+    padding: 0 2rem 2rem;
+}
+
+.category-description {
+    color: #666;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.vulnerability-items {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.vuln-item {
+    background: #f8f9ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.vuln-item:hover {
+    transform: translateX(5px);
+}
+
+.vuln-item h4 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vuln-item h4 i {
+    color: #667eea;
+}
+
+.vuln-item p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.impact-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.impact-level.critical {
+    background: #dc3545;
+    color: white;
+}
+
+.impact-level.high {
+    background: #fd7e14;
+    color: white;
+}
+
+.impact-level.medium {
+    background: #ffc107;
+    color: #212529;
+}
+
+.impact-level.low {
+    background: #6c757d;
+    color: white;
+}
+
+/* Attack Timeline Section */
+.attack-timeline {
+    padding: 80px 20px;
+    background: #1a1a1a;
+    color: white;
+}
+
+.attack-timeline h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.attack-timeline .section-intro {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #667eea, #764ba2);
+    z-index: 0;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    text-align: right;
+    margin-right: 3rem;
+    margin-left: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 3rem;
+}
+
+.timeline-marker {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 0 4px #1a1a1a, 0 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+.timeline-content {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-impact {
+    display: inline-block;
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .threats-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .motivation-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .motivation-card {
+        padding: 1.5rem;
+    }
+    
+    .category-header {
+        padding: 1rem 1.5rem;
+    }
+    
+    .category-content.expanded {
+        padding: 0 1.5rem 1.5rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        align-items: flex-start;
+    }
+    
+    .timeline-item .timeline-content {
+        text-align: left !important;
+        margin-left: 2rem !important;
+        margin-right: 0 !important;
+    }
+    
+    .timeline-marker {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .threats-header {
+        padding: 100px 15px 40px;
+    }
+    
+    .threats-header h1 {
+        font-size: 2rem;
+    }
+    
+    .attack-motivation, .vulnerabilities-section, .attack-timeline {
+        padding: 60px 15px;
+    }
+    
+    .motivation-card {
+        padding: 1rem;
+    }
+    
+    .motivation-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .vuln-item {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,176 @@
+/* Global Performance and Polish Enhancements */
+
+/* Smooth animations for reduced motion users */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+    .hero {
+        background: linear-gradient(135deg, #000080 0%, #000040 100%) !important;
+    }
+    
+    .btn-primary, .btn-secondary {
+        border: 2px solid currentColor !important;
+    }
+    
+    .navbar {
+        border-bottom: 2px solid #333 !important;
+    }
+}
+
+/* Dark mode support for system preference */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e5e5e5;
+        --bg-color: #1a1a1a;
+        --card-bg: #2d2d2d;
+        --border-color: #404040;
+    }
+    
+    body {
+        color: var(--text-color);
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    
+    .navbar {
+        background: rgba(30, 30, 30, 0.95) !important;
+        border-bottom-color: var(--border-color) !important;
+    }
+    
+    .nav-link {
+        color: var(--text-color) !important;
+    }
+    
+    .thesis-card, .point-card, .ecosystem-card {
+        background: var(--card-bg) !important;
+        border-color: var(--border-color) !important;
+        color: var(--text-color) !important;
+    }
+    
+    .thesis-text, .point-card p, .point-card h3, .ecosystem-card li {
+        color: var(--text-color) !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar, .hamburger, .floating-elements {
+        display: none !important;
+    }
+    
+    .hero {
+        padding: 2rem 0 !important;
+        background: white !important;
+        color: black !important;
+    }
+    
+    .hero-title, .hero-subtitle {
+        color: black !important;
+    }
+    
+    .btn-primary, .btn-secondary {
+        border: 1px solid black !important;
+        color: black !important;
+        background: white !important;
+    }
+    
+    .thesis-card, .point-card, .ecosystem-card {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        break-inside: avoid;
+    }
+}
+
+/* Focus improvements for keyboard navigation */
+.nav-link:focus,
+.btn-primary:focus,
+.btn-secondary:focus {
+    outline: 3px solid #667eea;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(102, 126, 234, 0.2);
+}
+
+/* Loading states */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* Improved touch targets for mobile */
+.touch-device .nav-link,
+.touch-device .btn-primary,
+.touch-device .btn-secondary,
+.touch-device button {
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 16px;
+}
+
+/* Better visual hierarchy on small screens */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 3vw, 1.1rem);
+    }
+    
+    .thesis-card h2 {
+        font-size: clamp(1.3rem, 4vw, 1.5rem);
+    }
+    
+    .point-card h3 {
+        font-size: clamp(1.1rem, 3.5vw, 1.25rem);
+    }
+}
+
+/* Micro-interactions for better UX */
+.point-card, .ecosystem-card, .thesis-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.point-card:hover, .ecosystem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary, .btn-secondary {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Font optimization */
+* {
+    font-display: swap;
+}
+
+/* Critical resource hints */
+.preload-hint {
+    font-display: swap;
+}

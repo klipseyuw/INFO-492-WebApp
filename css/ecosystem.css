@@ -1,0 +1,364 @@
+/* Ecosystem Page Specific Styles */
+
+.ecosystem-header {
+    padding: 120px 20px 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    color: white;
+}
+
+.ecosystem-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.ecosystem-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Ecosystem Visualization */
+.ecosystem-visualization {
+    padding: 80px 20px;
+    background: white;
+    position: relative;
+}
+
+.ecosystem-network {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.stakeholder-group {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8eeff 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.stakeholder-group:hover {
+    transform: translateY(-5px);
+}
+
+.stakeholder-group h3 {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.stakeholder-nodes, .tech-nodes, .data-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.node {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.node:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border-left-color: #667eea;
+}
+
+.node i {
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+    color: #667eea;
+}
+
+.node span {
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* Specific node colors */
+.core-stakeholders .node:hover { border-left-color: #28a745; }
+.tech-providers .node:hover { border-left-color: #007bff; }
+.data-exchanges .node:hover { border-left-color: #ffc107; }
+
+.core-stakeholders .node i { color: #28a745; }
+.tech-providers .node i { color: #007bff; }
+.data-exchanges .node i { color: #ffc107; }
+
+/* Connection Lines */
+.connection-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.connection-line {
+    stroke: url(#connectionGradient);
+    stroke-width: 2;
+    fill: none;
+    opacity: 0;
+    animation: drawLine 2s ease-in-out forwards;
+}
+
+@keyframes drawLine {
+    to { opacity: 1; }
+}
+
+/* Trust Relationships Section */
+.trust-relationships {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f1f3f8 0%, #e8eeff 100%);
+}
+
+.trust-relationships h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.trust-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.trust-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.trust-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.trust-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.trust-card h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.trust-card p {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.trust-examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.example {
+    background: linear-gradient(135deg, #f8f9ff, #e8eeff);
+    color: #667eea;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+/* Info Panel */
+.info-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.info-panel.active {
+    right: 0;
+}
+
+.info-panel.hidden {
+    display: none;
+}
+
+.info-content {
+    padding: 2rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.info-title {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-description {
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.info-details-list {
+    list-style: none;
+    padding: 0;
+}
+
+.info-details-list li {
+    background: #f8f9ff;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+    color: #333;
+    font-weight: 500;
+}
+
+.info-highlight {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .ecosystem-network {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .trust-types {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .ecosystem-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .ecosystem-network {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .info-panel {
+        width: 100vw;
+        right: -100vw;
+    }
+    
+    .trust-types {
+        grid-template-columns: 1fr;
+    }
+    
+    .trust-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ecosystem-header {
+        padding: 100px 15px 40px;
+    }
+    
+    .ecosystem-header h1 {
+        font-size: 2rem;
+    }
+    
+    .ecosystem-visualization, .trust-relationships {
+        padding: 60px 15px;
+    }
+    
+    .stakeholder-group {
+        padding: 1.5rem;
+    }
+    
+    .node {
+        padding: 0.8rem;
+    }
+    
+    .trust-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}

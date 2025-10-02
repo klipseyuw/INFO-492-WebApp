@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Management Dashboard - Logistics Security</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/global-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3><a href="../index.html" style="text-decoration: none; color: inherit;">Logistics AI Security</a></h3>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+                <li class="nav-item"><a href="threats.html" class="nav-link">Threats</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link active">AI Dashboard</a></li>
+                <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="citations.html" class="nav-link">Research</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <!-- Dashboard Header -->
+        <section id="dashboard" class="dashboard-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="header-text">
+                        <h1>AI Agent Management Dashboard</h1>
+                        <p>Comprehensive monitoring, control, and governance of agentic AI systems in logistics operations</p>
+                    </div>
+                    <div class="header-status">
+                        <div class="status-indicator">
+                            <div class="status-dot active"></div>
+                            <span>System Operational</span>
+                        </div>
+                        <div class="last-update">
+                            Last updated: <span id="current-time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Dashboard Content -->
+        <section class="dashboard-content">
+            <div class="container">
+                <!-- Control Panel -->
+                <div class="dashboard-grid">
+                    <!-- AI Agent Overview -->
+                    <div class="dashboard-card agent-overview">
+                        <div class="card-header">
+                            <h3><i class="fas fa-robot"></i> Active AI Agents</h3>
+                            <div class="card-controls">
+                                <button class="btn-icon" onclick="refreshAgents()"><i class="fas fa-sync-alt"></i></button>
+                                <button class="btn-icon emergency" onclick="showEmergencyStop()"><i class="fas fa-stop-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="agent-grid">
+                            <div class="agent-card threat-detection active" data-agent="threat">
+                                <div class="agent-status">
+                                    <div class="status-light active"></div>
+                                    <span class="agent-name">Threat Detection AI</span>
+                                </div>
+                                <div class="agent-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">847</span>
+                                        <span class="metric-label">Threats Detected</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">99.3%</span>
+                                        <span class="metric-label">Accuracy</span>
+                                    </div>
+                                </div>
+                                <div class="agent-actions">
+                                    <button class="btn-small" onclick="viewAgentDetails('threat')">Details</button>
+                                    <button class="btn-small secondary" onclick="pauseAgent('threat')">Pause</button>
+                                </div>
+                            </div>
+
+                            <div class="agent-card route-optimizer active" data-agent="routing">
+                                <div class="agent-status">
+                                    <div class="status-light active"></div>
+                                    <span class="agent-name">Route Optimization AI</span>
+                                </div>
+                                <div class="agent-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">12.4%</span>
+                                        <span class="metric-label">Cost Reduction</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">2,341</span>
+                                        <span class="metric-label">Routes Optimized</span>
+                                    </div>
+                                </div>
+                                <div class="agent-actions">
+                                    <button class="btn-small" onclick="viewAgentDetails('routing')">Details</button>
+                                    <button class="btn-small secondary" onclick="pauseAgent('routing')">Pause</button>
+                                </div>
+                            </div>
+
+                            <div class="agent-card document-validator warning" data-agent="document">
+                                <div class="agent-status">
+                                    <div class="status-light warning"></div>
+                                    <span class="agent-name">Document Validation AI</span>
+                                </div>
+                                <div class="agent-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">156</span>
+                                        <span class="metric-label">Anomalies Found</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">94.7%</span>
+                                        <span class="metric-label">Accuracy</span>
+                                    </div>
+                                </div>
+                                <div class="agent-actions">
+                                    <button class="btn-small" onclick="viewAgentDetails('document')">Details</button>
+                                    <button class="btn-small secondary" onclick="pauseAgent('document')">Pause</button>
+                                </div>
+                            </div>
+
+                            <div class="agent-card predictive-maintenance inactive" data-agent="maintenance">
+                                <div class="agent-status">
+                                    <div class="status-light inactive"></div>
+                                    <span class="agent-name">Predictive Maintenance AI</span>
+                                </div>
+                                <div class="agent-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">--</span>
+                                        <span class="metric-label">Offline</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">--</span>
+                                        <span class="metric-label">Scheduled Maintenance</span>
+                                    </div>
+                                </div>
+                                <div class="agent-actions">
+                                    <button class="btn-small" onclick="viewAgentDetails('maintenance')">Details</button>
+                                    <button class="btn-small primary" onclick="activateAgent('maintenance')">Activate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Threat Detection Chart -->
+                    <div class="dashboard-card threat-chart">
+                        <div class="card-header">
+                            <h3><i class="fas fa-chart-line"></i> Threat Detection Timeline</h3>
+                            <select class="time-selector" onchange="updateThreatChart(this.value)">
+                                <option value="24h">Last 24 Hours</option>
+                                <option value="7d">Last 7 Days</option>
+                                <option value="30d">Last 30 Days</option>
+                            </select>
+                        </div>
+                        <canvas id="threatChart"></canvas>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color critical"></div>
+                                <span>Critical Threats</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color high"></div>
+                                <span>High Priority</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color medium"></div>
+                                <span>Medium Priority</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Governance Framework -->
+                    <div class="dashboard-card governance">
+                        <div class="card-header">
+                            <h3><i class="fas fa-balance-scale"></i> AI Governance Framework</h3>
+                            <button class="btn-icon" onclick="showGovernanceDetails()"><i class="fas fa-cog"></i></button>
+                        </div>
+                        <div class="governance-grid">
+                            <div class="governance-item">
+                                <h4>Human-in-the-Loop</h4>
+                                <div class="governance-status">
+                                    <div class="status-bar">
+                                        <div class="status-fill" style="width: 87%"></div>
+                                    </div>
+                                    <span class="status-text">87% Human Oversight</span>
+                                </div>
+                                <p>Critical decisions require human approval</p>
+                            </div>
+
+                            <div class="governance-item">
+                                <h4>Risk Assessment</h4>
+                                <div class="governance-status">
+                                    <div class="risk-level low">LOW RISK</div>
+                                </div>
+                                <p>Current operational risk level within acceptable bounds</p>
+                            </div>
+
+                            <div class="governance-item">
+                                <h4>Audit Trail</h4>
+                                <div class="governance-status">
+                                    <div class="audit-status">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Compliant</span>
+                                    </div>
+                                </div>
+                                <p>All AI decisions logged and traceable</p>
+                            </div>
+
+                            <div class="governance-item">
+                                <h4>Performance Evaluation</h4>
+                                <div class="governance-status">
+                                    <div class="performance-score">
+                                        <span class="score">92</span>
+                                        <span class="score-label">/100</span>
+                                    </div>
+                                </div>
+                                <p>Weekly automated performance assessment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Alerts -->
+                    <div class="dashboard-card alerts">
+                        <div class="card-header">
+                            <h3><i class="fas fa-bell"></i> Recent Alerts</h3>
+                            <div class="alert-filter">
+                                <button class="filter-btn active" onclick="filterAlerts('all')">All</button>
+                                <button class="filter-btn" onclick="filterAlerts('critical')">Critical</button>
+                                <button class="filter-btn" onclick="filterAlerts('warnings')">Warnings</button>
+                            </div>
+                        </div>
+                        <div class="alerts-list" id="alertsList">
+                            <div class="alert-item critical">
+                                <div class="alert-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <div class="alert-title">Suspicious Document Pattern Detected</div>
+                                    <div class="alert-description">Document Validation AI identified anomalous patterns in shipping manifests from carrier XYZ-2341</div>
+                                    <div class="alert-meta">
+                                        <span class="alert-time">2 minutes ago</span>
+                                        <span class="alert-source">Document Validation AI</span>
+                                    </div>
+                                </div>
+                                <div class="alert-actions">
+                                    <button class="btn-small" onclick="investigateAlert(1)">Investigate</button>
+                                    <button class="btn-small secondary" onclick="dismissAlert(1)">Dismiss</button>
+                                </div>
+                            </div>
+
+                            <div class="alert-item warning">
+                                <div class="alert-icon">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <div class="alert-title">Route Optimization Confidence Low</div>
+                                    <div class="alert-description">AI confidence dropped to 73% for shipment RT-4563 due to unusual traffic patterns</div>
+                                    <div class="alert-meta">
+                                        <span class="alert-time">15 minutes ago</span>
+                                        <span class="alert-source">Route Optimization AI</span>
+                                    </div>
+                                </div>
+                                <div class="alert-actions">
+                                    <button class="btn-small" onclick="investigateAlert(2)">Review</button>
+                                    <button class="btn-small secondary" onclick="dismissAlert(2)">Dismiss</button>
+                                </div>
+                            </div>
+
+                            <div class="alert-item info">
+                                <div class="alert-icon">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                                <div class="alert-content">
+                                    <div class="alert-title">Scheduled Model Retraining Complete</div>
+                                    <div class="alert-description">Threat Detection AI model updated with latest threat intelligence data</div>
+                                    <div class="alert-meta">
+                                        <span class="alert-time">1 hour ago</span>
+                                        <span class="alert-source">System</span>
+                                    </div>
+                                </div>
+                                <div class="alert-actions">
+                                    <button class="btn-small" onclick="viewTrainingReport()">View Report</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- System Performance -->
+                    <div class="dashboard-card performance">
+                        <div class="card-header">
+                            <h3><i class="fas fa-tachometer-alt"></i> System Performance</h3>
+                        </div>
+                        <div class="performance-metrics">
+                            <div class="metric-group">
+                                <div class="metric-item">
+                                    <div class="metric-circle" style="--percentage: 92;">
+                                        <span class="metric-value">92%</span>
+                                    </div>
+                                    <div class="metric-label">CPU Usage</div>
+                                </div>
+                                
+                                <div class="metric-item">
+                                    <div class="metric-circle" style="--percentage: 78;">
+                                        <span class="metric-value">78%</span>
+                                    </div>
+                                    <div class="metric-label">Memory</div>
+                                </div>
+                                
+                                <div class="metric-item">
+                                    <div class="metric-circle" style="--percentage: 45;">
+                                        <span class="metric-value">45%</span>
+                                    </div>
+                                    <div class="metric-label">Storage</div>
+                                </div>
+                            </div>
+                            
+                            <div class="performance-stats">
+                                <div class="stat-item">
+                                    <span class="stat-label">Response Time</span>
+                                    <span class="stat-value">127ms</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Throughput</span>
+                                    <span class="stat-value">2.4k/sec</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Uptime</span>
+                                    <span class="stat-value">99.97%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Stop Modal -->
+        <div id="emergencyModal" class="modal hidden">
+            <div class="modal-content emergency">
+                <div class="modal-header">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Emergency Stop</h3>
+                    <button class="close-btn" onclick="closeModal('emergencyModal')">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Warning:</strong> This will immediately stop all AI agents and switch to manual override mode.</p>
+                    <p>This action should only be used in case of system malfunction or security breach.</p>
+                    <div class="confirmation-input">
+                        <label>Type "EMERGENCY STOP" to confirm:</label>
+                        <input type="text" id="confirmationInput" placeholder="Type confirmation text">
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-danger" onclick="executeEmergencyStop()">Execute Emergency Stop</button>
+                    <button class="btn-secondary" onclick="closeModal('emergencyModal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

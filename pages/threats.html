@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Analysis - AI Security Thesis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/threats.css">
+    <link rel="stylesheet" href="../css/global-enhancements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3><a href="../index.html" style="text-decoration: none; color: inherit;">Logistics AI Security</a></h3>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+                <li class="nav-item"><a href="threats.html" class="nav-link active">Threats</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link">AI Dashboard</a></li>
+                <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="citations.html" class="nav-link">Research</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Threats Header -->
+        <section id="threats" class="threats-header">
+            <div class="container">
+                <h1>Cyber Threats in Logistics</h1>
+                <p class="threats-subtitle">Analyzing attack vectors, vulnerabilities, and the critical need for AI-driven defense systems</p>
+            </div>
+        </section>
+
+        <!-- Why Logistics is Attractive to Attackers -->
+        <section class="attack-motivation">
+            <div class="container">
+                <h2>Why Attackers Target Logistics</h2>
+                <p class="section-intro">The logistics ecosystem is attractive to attackers because disruptions have outsized economic and geopolitical consequences</p>
+                
+                <div class="motivation-grid">
+                    <div class="motivation-card economic">
+                        <div class="motivation-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Economic Impact</h3>
+                        <p>Supply chain disruptions can cause billions in losses. A single attack on a major port or logistics hub can ripple through the global economy, affecting multiple industries and countries.</p>
+                        <div class="case-study">
+                            <strong>Case Study:</strong> The 2017 NotPetya attack on Maersk caused $300M+ in damages and disrupted global shipping for weeks.
+                        </div>
+                    </div>
+
+                    <div class="motivation-card geopolitical">
+                        <div class="motivation-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Geopolitical Leverage</h3>
+                        <p>Nation-state actors can use logistics attacks to exert political pressure, disrupt adversary economies, or gain strategic advantages during conflicts.</p>
+                        <div class="case-study">
+                            <strong>Example:</strong> Attacks on critical infrastructure like ports can serve as tools of economic warfare without direct military action.
+                        </div>
+                    </div>
+
+                    <div class="motivation-card cascading">
+                        <div class="motivation-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Cascading Effects</h3>
+                        <p>The interconnected nature of logistics means a single breach can cascade through multiple partners, amplifying the impact far beyond the initial target.</p>
+                        <div class="case-study">
+                            <strong>Risk:</strong> Compromising one 3PL provider can affect dozens of manufacturers and thousands of end customers.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Vulnerabilities -->
+        <section class="vulnerabilities-section">
+            <div class="container">
+                <h2>Key Vulnerabilities in Logistics</h2>
+                
+                <div class="vulnerability-categories">
+                    <!-- Data Integrity -->
+                    <div class="vulnerability-category" data-category="data-integrity">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Data Integrity Vulnerabilities</h3>
+                            <button class="expand-btn" onclick="toggleCategory('data-integrity')">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="category-content">
+                            <p class="category-description">Manipulation of critical logistics data can cause widespread disruption and fraud</p>
+                            
+                            <div class="vulnerability-items">
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-file-alt"></i> Shipping Manifest Manipulation</h4>
+                                    <p>Attackers can alter bills of lading, customs declarations, or shipping manifests to hide contraband, avoid duties, or cause delivery failures.</p>
+                                    <div class="impact-level high">High Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-thermometer-half"></i> IoT Sensor Data Falsification</h4>
+                                    <p>Temperature logs for pharmaceuticals, GPS coordinates, or security sensor readings can be manipulated to hide theft or quality issues.</p>
+                                    <div class="impact-level medium">Medium Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-barcode"></i> Inventory Record Tampering</h4>
+                                    <p>Warehouse management systems can be compromised to hide theft, create phantom inventory, or disrupt fulfillment operations.</p>
+                                    <div class="impact-level high">High Impact</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Operational Technology -->
+                    <div class="vulnerability-category" data-category="operational-tech">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>Operational Technology (OT) Systems</h3>
+                            <button class="expand-btn" onclick="toggleCategory('operational-tech')">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="category-content">
+                            <p class="category-description">Physical systems that control logistics operations are increasingly connected and vulnerable</p>
+                            
+                            <div class="vulnerability-items">
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-anchor"></i> Port Cranes & Terminal Equipment</h4>
+                                    <p>Automated cranes and terminal operating systems can be hijacked to cause physical damage or disrupt port operations.</p>
+                                    <div class="impact-level critical">Critical Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-robot"></i> Warehouse Automation</h4>
+                                    <p>Robotic picking systems, conveyor belts, and sorting machines can be compromised to cause operational chaos or safety incidents.</p>
+                                    <div class="impact-level high">High Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-truck"></i> Fleet Telematics</h4>
+                                    <p>Vehicle control systems, GPS tracking, and fleet management platforms can be manipulated to hijack shipments or cause accidents.</p>
+                                    <div class="impact-level high">High Impact</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI-Driven Vulnerabilities -->
+                    <div class="vulnerability-category" data-category="ai-vulnerabilities">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>AI-Driven Vulnerabilities</h3>
+                            <button class="expand-btn" onclick="toggleCategory('ai-vulnerabilities')">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="category-content">
+                            <p class="category-description">AI systems introduce new attack vectors through model manipulation and adversarial inputs</p>
+                            
+                            <div class="vulnerability-items">
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-route"></i> Routing & Forecasting Attacks</h4>
+                                    <p>Poisoning training data or injecting false signals to manipulate routing decisions, causing delays or enabling cargo theft.</p>
+                                    <div class="impact-level high">High Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-user-secret"></i> AI-Powered Social Engineering</h4>
+                                    <p>Using generative AI for sophisticated spear-phishing campaigns targeting logistics coordinators and customs brokers.</p>
+                                    <div class="impact-level medium">Medium Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-car"></i> Autonomous Vehicle Manipulation</h4>
+                                    <p>Compromising AI decision systems in autonomous trucks or drones to cause collisions, theft, or delivery disruptions.</p>
+                                    <div class="impact-level critical">Critical Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-chart-line"></i> Dashboard & Analytics Compromise</h4>
+                                    <p>Manipulating AI-driven visibility platforms to mislead multiple partners about cargo status and create fraud opportunities.</p>
+                                    <div class="impact-level medium">Medium Impact</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third-Party Risks -->
+                    <div class="vulnerability-category" data-category="third-party">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Third-Party Risks</h3>
+                            <button class="expand-btn" onclick="toggleCategory('third-party')">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="category-content">
+                            <p class="category-description">The extensive network of partners creates multiple entry points for attackers</p>
+                            
+                            <div class="vulnerability-items">
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-truck-moving"></i> Small Carrier Vulnerabilities</h4>
+                                    <p>Smaller trucking companies and customs brokers often lack robust cybersecurity, making them entry points for supply chain attacks.</p>
+                                    <div class="impact-level medium">Medium Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-cloud"></i> Cloud Provider Compromises</h4>
+                                    <p>Cloud-based TMS/WMS providers become single points of failure if compromised, affecting multiple customers simultaneously.</p>
+                                    <div class="impact-level critical">Critical Impact</div>
+                                </div>
+                                
+                                <div class="vuln-item">
+                                    <h4><i class="fas fa-handshake"></i> Vendor Supply Chain Attacks</h4>
+                                    <p>Compromising software vendors or service providers to inject malware or backdoors into logistics systems.</p>
+                                    <div class="impact-level high">High Impact</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Attack Timeline Visualization -->
+        <section class="attack-timeline">
+            <div class="container">
+                <h2>Anatomy of a Logistics Cyber Attack</h2>
+                <p class="section-intro">How a sophisticated attack might unfold across the logistics ecosystem</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item" data-step="1">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Initial Compromise</h3>
+                            <p>Attackers target a small 3PL provider with weak security through spear-phishing or software vulnerabilities</p>
+                            <div class="timeline-impact">Entry Point Established</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-step="2">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Lateral Movement</h3>
+                            <p>Using compromised credentials, attackers move laterally through connected systems and partner networks</p>
+                            <div class="timeline-impact">Network Infiltration</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-step="3">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Data Manipulation</h3>
+                            <p>Shipping manifests and tracking data are subtly altered to hide malicious cargo or create delivery confusion</p>
+                            <div class="timeline-impact">Trust Erosion Begins</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-step="4">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>AI System Poisoning</h3>
+                            <p>False data is fed to AI routing systems, causing suboptimal decisions and creating predictable vulnerabilities</p>
+                            <div class="timeline-impact">Operational Degradation</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-step="5">
+                        <div class="timeline-marker">5</div>
+                        <div class="timeline-content">
+                            <h3>Coordinated Disruption</h3>
+                            <p>Multiple systems are simultaneously compromised, causing widespread delivery delays and economic losses</p>
+                            <div class="timeline-impact">Cascading Failure</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/threats.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Citations - AI Security Thesis</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/citations.css">
+    <link rel="stylesheet" href="../css/global-enhancements.css">
+    <link href="../css/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3><a href="../index.html" style="text-decoration: none; color: inherit;">Logistics AI Security</a></h3>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="ecosystem.html" class="nav-link">Ecosystem</a></li>
+                <li class="nav-item"><a href="threats.html" class="nav-link">Threats</a></li>
+                <li class="nav-item"><a href="dashboard.html" class="nav-link">AI Dashboard</a></li>
+                <li class="nav-item"><a href="team.html" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="citations.html" class="nav-link active">Research</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Citations Header -->
+        <section id="citations" class="citations-header">
+            <div class="container">
+                <h1>Research & Citations</h1>
+                <p class="citations-subtitle">Academic sources, industry reports, and research papers supporting our analysis of AI-driven logistics cybersecurity</p>
+            </div>
+        </section>
+
+        <!-- Research Overview -->
+        <section class="research-overview">
+            <div class="container">
+                <h2>Research Foundation</h2>
+                <div class="research-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">25</div>
+                        <div class="stat-label">Academic Sources</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Industry Reports</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Research Papers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5</div>
+                        <div class="stat-label">Case Studies</div>
+                    </div>
+                </div>
+                
+                <div class="research-categories">
+                    <button class="category-btn active" onclick="filterCitations('all')">All Sources</button>
+                    <button class="category-btn" onclick="filterCitations('academic')">Academic Papers</button>
+                    <button class="category-btn" onclick="filterCitations('industry')">Industry Reports</button>
+                    <button class="category-btn" onclick="filterCitations('security')">Security Research</button>
+                    <button class="category-btn" onclick="filterCitations('ai')">AI & Machine Learning</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Citations List -->
+        <section class="citations-content">
+            <div class="container">
+                <div class="citations-list" id="citationsList">
+                    
+                    <!-- AI & Cybersecurity Sources -->
+                    <div class="citation-item ai security" data-year="2025">
+                        <div class="citation-header">
+                            <div class="citation-type ai">AI Research</div>
+                            <div class="citation-year">2025</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Transforming cybersecurity with agentic AI to combat emerging cyber threats</h3>
+                            <p class="citation-authors">Kshetri, N.</p>
+                            <p class="citation-details">Telecommunications Policy, 49(6), 102976.</p>
+                            <p class="citation-summary">Explores how agentic AI systems can be deployed to automatically detect and respond to cyber threats in real-time, with specific focus on telecommunications infrastructure.</p>
+                            <div class="citation-actions">
+                                <a href="#" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.telpol.2025.102976
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Kshetri, N. (2025). Transforming cybersecurity with agentic AI to combat emerging cyber threats. Telecommunications Policy, 49(6), 102976.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item ai security" data-year="2025">
+                        <div class="citation-header">
+                            <div class="citation-type ai">AI Research</div>
+                            <div class="citation-year">2025</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>AI-Driven Cyber Threat Detection for Global Logistics in United States</h3>
+                            <p class="citation-authors">OJO TITILAYO PRECIOUS</p>
+                            <p class="citation-details">International Journal of Science and Research Archive, 14(1), 1360–1367.</p>
+                            <p class="citation-summary">Investigates the application of AI-driven systems for detecting cyber threats specifically in the U.S. logistics sector, highlighting unique vulnerabilities and defense mechanisms.</p>
+                            <div class="citation-actions">
+                                <a href="#" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.30574/ijsra.2025.14.1.0080
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="OJO TITILAYO PRECIOUS. (2025). AI-Driven Cyber Threat Detection for Global Logistics in United States. International Journal of Science and Research Archive, 14(1), 1360–1367.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Logistics & Supply Chain Sources -->
+                    <div class="citation-item industry academic" data-year="2024">
+                        <div class="citation-header">
+                            <div class="citation-type academic">Academic</div>
+                            <div class="citation-year">2024</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Enhancing Logistics Performance through Increased Trust</h3>
+                            <p class="citation-authors">Kim, S., et al.</p>
+                            <p class="citation-details">Systems, 12(4), 141. MDPI.</p>
+                            <p class="citation-summary">Examines the role of trust in logistics networks and how technological solutions can enhance trust relationships between supply chain partners.</p>
+                            <div class="citation-actions">
+                                <a href="https://www.mdpi.com/2079-8954/12/4/141" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Source
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Kim, S., et al. (2024). Enhancing Logistics Performance through Increased Trust. Systems, 12(4), 141. MDPI.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item security industry" data-year="2024">
+                        <div class="citation-header">
+                            <div class="citation-type security">Security</div>
+                            <div class="citation-year">2024</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>FAIR: Cyber security risk quantification in logistics sector</h3>
+                            <p class="citation-authors">Seid, E., Satheesh, S., Popov, O., & Blix, F.</p>
+                            <p class="citation-details">Procedia Computer Science, 237, 783–792.</p>
+                            <p class="citation-summary">Presents a framework for quantifying cybersecurity risks in the logistics sector using Factor Analysis of Information Risk (FAIR) methodology.</p>
+                            <div class="citation-actions">
+                                <a href="#" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.procs.2024.05.166
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Seid, E., Satheesh, S., Popov, O., & Blix, F. (2024). FAIR: Cyber security risk quantification in logistics sector. Procedia Computer Science, 237, 783–792.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item ai security" data-year="2024">
+                        <div class="citation-header">
+                            <div class="citation-type ai">AI Research</div>
+                            <div class="citation-year">2024</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>An Empirical Exploration of Trust Dynamics in LLM Supply Chains</h3>
+                            <p class="citation-authors">Wei, J., et al.</p>
+                            <p class="citation-details">arXiv:2405.16310.</p>
+                            <p class="citation-summary">Analyzes trust relationships and security implications in Large Language Model supply chains, relevant to understanding AI system vulnerabilities in logistics.</p>
+                            <div class="citation-actions">
+                                <a href="https://arxiv.org/abs/2405.16310" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> arXiv Link
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Wei, J., et al. (2024). An Empirical Exploration of Trust Dynamics in LLM Supply Chains. arXiv:2405.16310.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item ai security" data-year="2024">
+                        <div class="citation-header">
+                            <div class="citation-type ai">AI Research</div>
+                            <div class="citation-year">2024</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Deepfake detection: A comprehensive survey from the reliability perspective</h3>
+                            <p class="citation-authors">Wang, T., Liao, X., Chow, K. P., Lin, X., & Wang, Y.</p>
+                            <p class="citation-details">ACM Computing Surveys, 57(3), 1–35.</p>
+                            <p class="citation-summary">Comprehensive review of deepfake detection technologies and their reliability, with implications for AI-powered social engineering attacks in logistics.</p>
+                            <div class="citation-actions">
+                                <a href="#" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.1145/3699710
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Wang, T., Liao, X., Chow, K. P., Lin, X., & Wang, Y. (2024). Deepfake detection: A comprehensive survey from the reliability perspective. ACM Computing Surveys, 57(3), 1–35.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supply Chain Security Research -->
+                    <div class="citation-item academic security" data-year="2022">
+                        <div class="citation-header">
+                            <div class="citation-type academic">Academic</div>
+                            <div class="citation-year">2022</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Supply Chain Characteristics as Predictors of Cyber Risk: A Machine-Learning Assessment</h3>
+                            <p class="citation-authors">Hu, Q., Levi, R., Yahalom, M., & Elovici, Y.</p>
+                            <p class="citation-details">arXiv:2210.15785.</p>
+                            <p class="citation-summary">Uses machine learning to identify supply chain characteristics that predict cyber risk, providing data-driven insights for logistics security.</p>
+                            <div class="citation-actions">
+                                <a href="https://arxiv.org/abs/2210.15785" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> arXiv Link
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Hu, Q., Levi, R., Yahalom, M., & Elovici, Y. (2022). Supply Chain Characteristics as Predictors of Cyber Risk: A Machine-Learning Assessment. arXiv:2210.15785.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item academic security" data-year="2022">
+                        <div class="citation-header">
+                            <div class="citation-type academic">Academic</div>
+                            <div class="citation-year">2022</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Impact of cybersecurity on operations and supply chain management</h3>
+                            <p class="citation-authors">Ivanov, D., et al.</p>
+                            <p class="citation-details">Production and Operations Management.</p>
+                            <p class="citation-summary">Examines how cybersecurity incidents affect supply chain operations and provides frameworks for resilience planning.</p>
+                            <div class="citation-actions">
+                                <a href="https://journals.sagepub.com/doi/10.1111/poms.13859" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.1111/poms.13859
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Ivanov, D., et al. (2022). Impact of cybersecurity on operations and supply chain management. Production and Operations Management.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item academic security" data-year="2021">
+                        <div class="citation-header">
+                            <div class="citation-type academic">Academic</div>
+                            <div class="citation-year">2021</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Cybersecurity in Logistics and Supply Chain Management: An overview and future research directions</h3>
+                            <p class="citation-authors">Cheung, K.-F., Bell, M. G. H., & Bhattacharjya, J.</p>
+                            <p class="citation-details">Transportation Research Part E: Logistics and Transportation Review, 146, 102217.</p>
+                            <p class="citation-summary">Comprehensive overview of cybersecurity challenges in logistics and supply chain management with research directions for future work.</p>
+                            <div class="citation-actions">
+                                <a href="#" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.1016/j.tre.2020.102217
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Cheung, K.-F., Bell, M. G. H., & Bhattacharjya, J. (2021). Cybersecurity in Logistics and Supply Chain Management: An overview and future research directions. Transportation Research Part E: Logistics and Transportation Review, 146, 102217.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Industry Reports -->
+                    <div class="citation-item industry security" data-year="2025">
+                        <div class="citation-header">
+                            <div class="citation-type industry">Industry</div>
+                            <div class="citation-year">2025</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>Securing the Supply Chain: Cyber Security's Importance in Logistics</h3>
+                            <p class="citation-authors">Maersk</p>
+                            <p class="citation-details">Maersk Insights.</p>
+                            <p class="citation-summary">Industry perspective from a major logistics company on the importance of cybersecurity in global supply chains, including lessons learned from past incidents.</p>
+                            <div class="citation-actions">
+                                <a href="https://www.maersk.com/insights/resilience/2025/04/01/securing-the-supply-chain" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Report
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Maersk. (2025). Securing the Supply Chain: Cyber Security's Importance in Logistics. Maersk Insights.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="citation-item industry security" data-year="2025">
+                        <div class="citation-header">
+                            <div class="citation-type industry">Industry</div>
+                            <div class="citation-year">2025</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>2025 Supply Chain Threat Landscape: AI, APIs, and the Weakest Link</h3>
+                            <p class="citation-authors">SecureWorld</p>
+                            <p class="citation-details">SecureWorld Industry News.</p>
+                            <p class="citation-summary">Analysis of emerging supply chain threats in 2025, with focus on AI vulnerabilities and API security challenges.</p>
+                            <div class="citation-actions">
+                                <a href="https://www.secureworld.io/industry-news/2025-supply-chain-threats-ai-api" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Report
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="SecureWorld. (2025). 2025 Supply Chain Threat Landscape: AI, APIs, and the Weakest Link. SecureWorld Industry News.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Technical Standards -->
+                    <div class="citation-item academic industry" data-year="1995">
+                        <div class="citation-header">
+                            <div class="citation-type academic">Standards</div>
+                            <div class="citation-year">1995</div>
+                        </div>
+                        <div class="citation-content">
+                            <h3>An Analysis of ANSI ASC X12 and UNEDIFACT Electronic Data Interchange (EDI) Standards</h3>
+                            <p class="citation-authors">Aronoff, R., & Hsing, K.</p>
+                            <p class="citation-details">NIST Internal Report 5631.</p>
+                            <p class="citation-summary">Foundational analysis of EDI standards that form the basis of modern logistics data exchange protocols, highlighting security considerations.</p>
+                            <div class="citation-actions">
+                                <a href="#" class="citation-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> DOI: 10.6028/nist.ir.5631
+                                </a>
+                                <button class="btn-copy" onclick="copyCitation(this)" data-citation="Aronoff, R., & Hsing, K. (1995). An Analysis of ANSI ASC X12 and UNEDIFACT Electronic Data Interchange (EDI) Standards. NIST Internal Report 5631.">
+                                    <i class="fas fa-copy"></i> Copy Citation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button class="btn-load-more" onclick="loadMoreCitations()">
+                        <i class="fas fa-plus"></i> Load More Citations
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Methodology -->
+        <section class="research-methodology">
+            <div class="container">
+                <h2>Research Methodology</h2>
+                <div class="methodology-grid">
+                    <div class="methodology-card">
+                        <div class="methodology-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Literature Review</h3>
+                        <p>Systematic review of academic literature on AI cybersecurity, logistics security, and supply chain vulnerabilities from 2019-2025.</p>
+                    </div>
+
+                    <div class="methodology-card">
+                        <div class="methodology-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industry Analysis</h3>
+                        <p>Analysis of industry reports, case studies, and real-world incidents to understand practical implications and current threat landscape.</p>
+                    </div>
+
+                    <div class="methodology-card">
+                        <div class="methodology-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Stakeholder Insights</h3>
+                        <p>Direct interviews and insights from logistics professionals to understand operational challenges and security concerns.</p>
+                    </div>
+
+                    <div class="methodology-card">
+                        <div class="methodology-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Comparative Analysis</h3>
+                        <p>Cross-referencing multiple sources to identify patterns, consensus viewpoints, and emerging trends in logistics cybersecurity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/citations.js"></script>
+</body>
+</html>
