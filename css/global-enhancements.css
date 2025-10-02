@@ -189,3 +189,18 @@ p, .section-intro, .member-content p, .ecosystem-card p {
 .secondary-text, .meta-text {
     color: #555 !important;
 }
+
+/* Mobile navigation link color fix */
+@media (max-width: 768px) {
+    .nav-menu .nav-link {
+        color: #222 !important;
+    }
+    
+    .nav-menu .nav-link:hover {
+        color: #667eea !important;
+    }
+    
+    .nav-menu .nav-link.active {
+        color: #667eea !important;
+    }
+}
