@@ -174,3 +174,18 @@
 .preload-hint {
     font-display: swap;
 }
+
+/* Enhanced text contrast for better readability */
+.enhanced-contrast {
+    color: #333 !important;
+}
+
+/* Ensure minimum contrast ratios across the site */
+p, .section-intro, .member-content p, .ecosystem-card p {
+    color: #444 !important;
+}
+
+/* Maintain proper contrast for secondary text */
+.secondary-text, .meta-text {
+    color: #555 !important;
+}

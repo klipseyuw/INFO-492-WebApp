@@ -378,7 +378,7 @@ body {
 }
 
 .point-card p {
-    color: #777;
+    color: #555;
     line-height: 1.6;
 }
 
@@ -398,7 +398,7 @@ body {
 .section-intro {
     text-align: center;
     font-size: 1.2rem;
-    color: #666;
+    color: #444;
     margin-bottom: 3rem;
     max-width: 800px;
     margin-left: auto;
@@ -496,11 +496,18 @@ body {
         border-radius: 8px;
         margin: 0 1rem;
         transition: all 0.3s ease;
+        color: #222 !important;
     }
     
     .nav-link:hover {
         background: rgba(102, 126, 234, 0.1);
-        color: #667eea;
+        color: #667eea !important;
+    }
+    
+    .nav-link.active {
+        background: rgba(102, 126, 234, 0.15);
+        color: #667eea !important;
+        font-weight: 600;
     }
     
     .hero-content {
