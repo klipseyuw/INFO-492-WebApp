@@ -94,6 +94,38 @@
     .attack-timeline h3 {
         color: rgba(255, 255, 255, 0.9) !important;
     }
+    
+    /* Dashboard header text should remain white */
+    .dashboard-header .header-text h1,
+    .dashboard-header .header-text p {
+        color: white !important;
+    }
+    
+    /* Chart legend text should be visible on white background */
+    .chart-legend .legend-item span {
+        color: #333 !important;
+    }
+    
+    /* Impact level badges should maintain their specific colors */
+    .impact-level.critical {
+        background: #dc3545 !important;
+        color: white !important;
+    }
+    
+    .impact-level.high {
+        background: #fd7e14 !important;
+        color: white !important;
+    }
+    
+    .impact-level.medium {
+        background: #ffc107 !important;
+        color: #212529 !important;
+    }
+    
+    .impact-level.low {
+        background: #6c757d !important;
+        color: white !important;
+    }
 }
 
 /* Print styles */
@@ -223,6 +255,13 @@ p, .section-intro, .member-content p, .ecosystem-card p {
 /* Maintain proper contrast for secondary text */
 .secondary-text, .meta-text {
     color: #555 !important;
+}
+
+/* Exceptions for elements on dark backgrounds */
+.dashboard-header p,
+.attack-timeline p,
+.timeline-content p {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Mobile navigation link color fix */

@@ -248,23 +248,23 @@
 }
 
 .impact-level.critical {
-    background: #dc3545;
-    color: white;
+    background: #dc3545 !important;
+    color: white !important;
 }
 
 .impact-level.high {
-    background: #fd7e14;
-    color: white;
+    background: #fd7e14 !important;
+    color: white !important;
 }
 
 .impact-level.medium {
-    background: #ffc107;
-    color: #212529;
+    background: #ffc107 !important;
+    color: #212529 !important;
 }
 
 .impact-level.low {
-    background: #6c757d;
-    color: white;
+    background: #6c757d !important;
+    color: white !important;
 }
 
 /* Attack Timeline Section */
