@@ -59,6 +59,41 @@
     .thesis-text, .point-card p, .point-card h3, .ecosystem-card li {
         color: var(--text-color) !important;
     }
+    
+    /* Attack timeline section specific dark mode fixes */
+    .attack-timeline h2 {
+        color: white !important;
+    }
+    
+    .attack-timeline .section-intro {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .timeline-content h3 {
+        color: white !important;
+    }
+    
+    .timeline-content p {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    .timeline-impact {
+        color: #ff6b6b !important;
+    }
+    
+    /* Ensure other sections with dark backgrounds maintain proper text color */
+    .attack-timeline,
+    .attack-timeline * {
+        color: white !important;
+    }
+    
+    /* Override for specific elements that should remain white on dark backgrounds */
+    .attack-timeline .timeline-content p,
+    .attack-timeline .section-intro,
+    .attack-timeline h2,
+    .attack-timeline h3 {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
 }
 
 /* Print styles */

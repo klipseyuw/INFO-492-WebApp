@@ -298,6 +298,124 @@
     margin-top: 1rem;
 }
 
+/* Key Vulnerabilities Section */
+.key-vulnerabilities {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f8f9ff 0%, #fff5f5 100%);
+}
+
+.key-vulnerabilities h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.key-vulnerabilities .section-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vulnerability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vulnerability-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 4px solid #e53e3e;
+}
+
+.vulnerability-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.vulnerability-card.data-integrity {
+    border-left-color: #3182ce;
+}
+
+.vulnerability-card.operational-tech {
+    border-left-color: #e53e3e;
+}
+
+.vulnerability-card.ai-vulnerabilities {
+    border-left-color: #805ad5;
+}
+
+.vulnerability-card.third-party {
+    border-left-color: #d69e2e;
+}
+
+.vulnerability-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.data-integrity .vulnerability-icon {
+    background: linear-gradient(135deg, #3182ce, #2c5282);
+}
+
+.operational-tech .vulnerability-icon {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+}
+
+.ai-vulnerabilities .vulnerability-icon {
+    background: linear-gradient(135deg, #805ad5, #6b46c1);
+}
+
+.third-party .vulnerability-icon {
+    background: linear-gradient(135deg, #d69e2e, #b7791f);
+}
+
+.vulnerability-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.vulnerability-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vulnerability-card li {
+    padding: 0.5rem 0;
+    color: #4a5568;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.vulnerability-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #e53e3e;
+    font-weight: bold;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .ecosystem-network {
@@ -332,6 +450,19 @@
     
     .trust-card {
         padding: 1.5rem;
+    }
+    
+    .vulnerability-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .key-vulnerabilities {
+        padding: 60px 15px;
+    }
+    
+    .key-vulnerabilities h2 {
+        font-size: 2rem;
     }
 }
 
